@@ -270,6 +270,21 @@ th {
   src: url('../fonts/glyphicons-halflings-regular.eot');
   src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
+@font-face {
+  font-family: 'Novecento normal';
+
+  src: url('../fonts/Synthview - Novecento sans wide Normal.otf');
+ }
+@font-face {
+  font-family: 'Novecento light';
+
+  src: url('../fonts/Synthview - Novecento sans wide Light.otf');
+ }
+@font-face {
+  font-family: 'Phagspa';
+
+  src: url('../fonts/phagspa.ttf');
+ }
 .glyphicon {
   position: relative;
   top: 1px;
@@ -1086,7 +1101,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Phagspa", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
@@ -1596,6 +1611,10 @@ pre code {
   .container {
     width: 1170px;
   }
+}
+.container-full {
+  margin: 0 auto;
+  width: 100%;
 }
 .container-fluid {
   padding-right: 15px;
@@ -4074,7 +4093,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 @media (min-width: 768px) {
   .navbar {
-    border-radius: 4px;
+    border-radius: 0px;
   }
 }
 @media (min-width: 768px) {
@@ -4396,7 +4415,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default {
-  background-color: #f8f8f8;
+  background-color: #262626;
   border-color: #e7e7e7;
 }
 .navbar-default .navbar-brand {
