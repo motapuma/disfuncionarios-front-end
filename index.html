@@ -49,9 +49,16 @@
 
 
         .carousel-caption {
-            background: rgba(0, 0, 0, 0.35);
+            background: rgba(0, 0, 0, 0.55);
             top: 60%;
             right: 0px;
+            text-align: left;
+            left: 20px;
+
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+
 
 
         }
@@ -141,6 +148,9 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
+
+
+
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -154,21 +164,37 @@
             <div class="item active">
                 <img src="http://s.fotorama.io/1.jpg" alt="..." width="100%">
                 <div class="carousel-caption">
-                    <h1>Este es el contenido de la primer imagen</h1>
+                    <div style="padding-left: 5%; "> <h3>Este es el contenido de la primer imagen</h3></div>
                 </div>
             </div>
             <div class="item">
                 <img src="http://s.fotorama.io/2.jpg" alt="..." width="100%">
-                <div class="carousel-caption">
-                    <h1>Este es el contenido de la segunda imagen</h1><p>Donec aliquam non nunc a semper. Mauris id mollis purus. Praesent blandit mi tortor, at facilisis tellus efficitur quis. Sed aliquet porta tincidunt. Mauris ut sodales dolor. Vestibulum eget eros arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus tortor mauris,
-                    eu viverra lorem lacinia ac. Curabitur ut urna id sem egestas maximus.</p>
-                </div>
+
+
+                <table style="width:100%">
+
+                    <tr>
+                        <th width="20%"></th>
+
+                        <th >
+                            <div class="carousel-caption" ><div style="padding-left: 5%; ">
+                                <h3>Este es el contenido de la segunda imagen</h3><p>Donec aliquam non nunc a semper. Mauris id mollis purus. Praesent blandit mi tortor, at facilisis tellus efficitur quis. Sed aliquet porta tincidunt. Mauris ut sodales dolor. Vestibulum eget eros arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus tortor mauris,
+                                eu viverra lorem lacinia ac. Curabitur ut urna id sem egestas maximus.</p></div>
+                            </div>
+
+                        </th>
+
+                        <th></th></tr>
+
+                </table>
+
+
             </div>
             <div class="item">
                 <img src="http://s.fotorama.io/3.jpg" alt="..." width="100%">
                 <div class="carousel-caption">
-                    <h1>Este es el contenido de la segunda imagen</h1><p>Donec aliquam non nunc a semper. Mauris id mollis purus. Praesent blandit mi tortor, at facilisis tellus efficitur quis. Sed aliquet porta tincidunt. Mauris ut sodales dolor. Vestibulum eget eros arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus tortor mauris,
-                    eu viverra lorem lacinia ac. Curabitur ut urna id sem egestas maximus.</p>
+                    <div style="padding-left: 5%; ">  <h3>Este es el contenido de la segunda imagen</h3><p>Donec aliquam non nunc a semper. Mauris id mollis purus. Praesent blandit mi tortor, at facilisis tellus efficitur quis. Sed aliquet porta tincidunt. Mauris ut sodales dolor. Vestibulum eget eros arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus tortor mauris,
+                    eu viverra lorem lacinia ac. Curabitur ut urna id sem egestas maximus.</p> </div>
                 </div>
             </div>
 
