@@ -84,7 +84,7 @@ function updateChart(error,data) {
 			candidate.photo = null;
 		}else if(!(candidate.photo === null))
 		{
-				photo = ":3000" + candidate.photo;
+				photo = "http://disfuncionarios.org:3000" + candidate.photo;
 		}
 
 
@@ -119,7 +119,7 @@ function updateChart(error,data) {
 				relationship.photo = null;
 			}else if(!(relationship.photo === null) )
 			{
-				photo = ":3000" + relationship.photo;
+				photo = "http://disfuncionarios.org:3000" + relationship.photo;
 			}
 
 			var noder = {
@@ -231,7 +231,7 @@ function updateChart(error,data) {
 }
 $( "#candidatos" ).change(function(){
 	 $('#carousel-example-generic').carousel(0);
-	var data_url = ":3000/pretty_api_2/candidate/" + $(this).val();
+	var data_url = "http://disfuncionarios.org:3000/pretty_api_2/candidate/" + $(this).val();
 	console.log("candidate" + $(this).val() );
 	// actualizar grafico
 	d3.json(data_url,updateChart);
@@ -241,7 +241,7 @@ $( "#municipios" ).change(function(){
 	var zone = $(this).val();
 	$("#candidatos").empty();
     $.ajax({
-        url: ':3000/api/all_candidates',
+        url: 'http://disfuncionarios.org:3000/api/all_candidates',
         dataType: 'json',
         type: 'get',
         cache: false,
@@ -266,7 +266,7 @@ $( "#municipios" ).change(function(){
  */
 (function main() {
 	// variables
-	var data_url = ":3000/pretty_api_2/candidate/1";
+	var data_url = "http://disfuncionarios.org:3000/pretty_api_2/candidate/1";
 		
 	// actualizar grafico
 	d3.json(data_url,updateChart);

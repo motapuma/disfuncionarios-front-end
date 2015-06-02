@@ -1,5 +1,5 @@
 $.ajax({
-    url: ':3000/api/zone',
+    url: 'http://disfuncionarios.org:3000/api/zone',
     dataType: 'json',
     type: 'get',
     cache: false,
@@ -16,7 +16,7 @@ $.ajax({
 //http://disfuncionarios.org:3000/api/all_candidates
 
 $.ajax({
-    url: ':3000/api/all_candidates',
+    url: 'http://disfuncionarios.org:3000/api/all_candidates',
     dataType: 'json',
     type: 'get',
     cache: false,
