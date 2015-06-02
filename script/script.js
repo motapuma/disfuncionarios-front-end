@@ -3,10 +3,14 @@ $.ajax({
     dataType: 'json',
     type: 'get',
     cache: false,
+    //Monterrey, San Nicolás, San Pedro y Nuevo León
     success: function(data){
         $("#municipios").append('<option value="" selected>Municipio</option>')
         $(data.muncipios).each(function(index, value){
-            $("#municipios").append('<option value="'+ this.id +'">'+ this.name +'</option>')
+            if(this.id == "0" ||this.id == "3"||this.id == "8"||this.id == "12"){
+              $("#municipios").append('<option value="'+ this.id +'">'+ this.name +'</option>')  
+            }
+            
 
             //console.log(value.name);
         });
@@ -26,8 +30,10 @@ $.ajax({
         $(data).each(function(index, value){
             var name = JSON.parse(value).name;
             var id = JSON.parse(value).id;
-            $("#candidatos").append('<option value="'+ id +'">'+ name +'</option>');
-
+            var zone = JSON.parse(value).zone;
+            if(zone == "0" ||zone == "3"||zone == "8"||zone == "12"){
+                $("#candidatos").append('<option value="'+ id +'">'+ name +'</option>');
+            }
             console.log(name);
         });
     }

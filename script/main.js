@@ -253,6 +253,7 @@ $( "#municipios" ).change(function(){
                 var id = JSON.parse(value).id;
 
                 if (JSON.parse(value).zone == zone){
+                	
                 	$("#candidatos").append('<option value="'+ id +'">'+ name +'</option>');
                 }
                 //console.log(name);
