@@ -23,18 +23,19 @@
 	text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;		
 }
 
-.tooltip {
+.tooltip2 {
 	background-color: white;
 	border: 1px solid gray;
 	padding: 5px;
+	opacity: 1 !important;
 }
 
-.tooltip h1 {
+.tooltip2 h1 {
 	font-size: 12px;
 	font-family: Verdana, Geneva, sans-serif;
 }
 
-.tooltip a {
+.tooltip2 a {
 	font-size: 10px;
 	font-family: Verdana, Geneva, sans-serif;
 }

@@ -4,16 +4,22 @@
 
 function tooltipCandidate(name,bio) {
 	if (bio == undefined) bio = "";
-	return '<div class="tooltip"><h1>'+name+'</h1><p>'+bio+'</p></div>';
+	return '<div class="tooltip2"><h1>'+name+'</h1><p>'+bio+'</p></div>';
 }
 
 function tooltipRelationship(name,urls,bio) {
-	var html = '<div class="tooltip"><h1>'+name+'</h1>'
+	var html = '<div class="tooltip2"><h1>'+name+'</h1>'
 	if (bio == undefined) bio = "";
 
 	if (urls != null) {
 		for (var c = 0; c < urls.length; c++) {
-			html += '<p><a target="_blank" href="'+urls[c]+'">'+urls[c]+'</p>'		
+			var url = "";
+			for(var propertyName in urls[c]) {
+				console.log(propertyName); 
+				url = urls[c][propertyName];
+			}
+
+			html += '<p><a target="_blank" href="'+url+'">'+url+'</p>'		
 		}
 	}
 
@@ -191,7 +197,7 @@ function updateChart(error,data) {
 		.attr("height", function(d) { return d.size; });
 
 	node.append('div')
-		.attr('class','tooltip')
+		.attr('class','tooltip2')
 		.append
 
 /*
