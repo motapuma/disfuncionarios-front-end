@@ -4,7 +4,7 @@ $.ajax({
     type: 'get',
     cache: false,
     success: function(data){
-
+        $("#municipios").append('<option value="" selected>Municipio</option>')
         $(data.muncipios).each(function(index, value){
             $("#municipios").append('<option value="'+ this.id +'">'+ this.name +'</option>')
 
@@ -22,6 +22,7 @@ $.ajax({
     cache: false,
     success: function(data){
         console.log("es success");
+         $("#candidatos").append('<option value="" selected>Candidat@</option>');
         $(data).each(function(index, value){
             var name = JSON.parse(value).name;
             var id = JSON.parse(value).id;

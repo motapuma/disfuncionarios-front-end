@@ -246,7 +246,8 @@ $( "#municipios" ).change(function(){
         type: 'get',
         cache: false,
         success: function(data){
-            console.log("es success");
+           	
+           	$("#candidatos").append('<option value="" selected>Candidat@</option>');
             $(data).each(function(index, value){
                 var name = JSON.parse(value).name;
                 var id = JSON.parse(value).id;
