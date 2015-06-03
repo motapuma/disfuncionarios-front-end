@@ -28,6 +28,13 @@ function tooltipRelationship(name,urls,bio) {
 function getColor(key, colors) {
 
 	obj = _.find(colors, function(obj) { return obj.name == key })
+	if (typeof obj === "undefined") {
+		return "#999999";
+	}
+	if (typeof obj.color === "undefined") {
+		return "#999999";
+	}
+
 	return "#"+obj.color;
 
 }
@@ -246,6 +253,7 @@ function updateChart(error,data) {
 }
 $( "#candidatos" ).change(function(){
 	 $('#carousel-example-generic').carousel(0);
+	 $('.tooltip2').remove();
 	var data_url = "http://disfuncionarios.org:3000/pretty_api_2/candidate/" + $(this).val();
 	console.log("candidate" + $(this).val() );
 	// actualizar grafico
