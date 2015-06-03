@@ -25,6 +25,12 @@ function tooltipRelationship(name,urls,bio) {
 
 	return html+'</div>';
 }
+function getColor(key, colors) {
+
+	obj = _.find(colors, function(obj) { return obj.name == key })
+	return "#"+obj.color;
+
+}
 
 function updateChart(error,data) {
 	
@@ -40,6 +46,7 @@ function updateChart(error,data) {
 	var nodeBaseSize = 100;
 	var relationshipBaseSize = 50;
 	var linkSize = 450;
+	var linkWeight = 3;
 	
 	var minRelationships = 5;
 	
@@ -59,7 +66,7 @@ function updateChart(error,data) {
 	var chartHeight = chart.node().getBoundingClientRect().height;
 	
 	// colores
-	var color = d3.scale.category20();
+	//var color = d3.scale.category20();
 		
 	// layout de grafo
 	var force = d3.layout.force()
@@ -149,7 +156,8 @@ function updateChart(error,data) {
 				target: relationshipIndex,
 				value: relationship.urls.length,
 				url: "url",
-				type: "tipo"
+				type: "tipo",
+				color: getColor(relationship.relation_type,window.colors)
 			};
 
 			links.push(link);
@@ -177,7 +185,8 @@ function updateChart(error,data) {
 		.enter()
 		.append("line")
 			.attr("class", "link")
-			.style("stroke-width", function(d) { return d.value * 2; });
+			.attr("stroke",function(d){return d.color;})
+			.style("stroke-width", function(d) { return d.value * linkWeight; });
 
 
 	var node = svg.selectAll(".node")
@@ -274,8 +283,16 @@ $( "#municipios" ).change(function(){
  */
 (function main() {
 	// variables
+	var colors_url = "colors.json";
 	var data_url = "http://disfuncionarios.org:3000/pretty_api_2/candidate/1";
 		
 	// actualizar grafico
-	d3.json(data_url,updateChart);
+	
+	d3.json(colors_url, function(error, json) {
+	  	window.colors = json;
+
+		// actualizar grafico
+		d3.json(data_url,updateChart);
+	  
+	});
 })()
